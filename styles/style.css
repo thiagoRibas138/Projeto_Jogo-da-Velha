@@ -1,0 +1,195 @@
+body {
+    height: 100%;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 2px;
+    text-align: center;
+    background-image: linear-gradient(to left, rgb(230, 8, 19) 5%, rgb(5, 7, 75) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+
+  .title{
+   
+    font-size: 50px;
+    color: #6e94c5;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+    transition: all .3s;
+    transition-timing-function: ease-out;
+  }
+
+  .title:hover{
+    word-spacing: -16px;
+    letter-spacing: 10px;
+}
+
+.home{
+  background-color: var(--intensBackGround);
+  color: whitesmoke;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-size: 5vw;
+  border-radius: 100px;
+  white-space: nowrap;
+  bottom: 0;
+
+  left: 50%;
+
+  transition: all .2s;
+}
+
+.home:hover{
+  box-shadow: 0 10px  20px rgba(0, 0, 0, 0.4);
+  color: black;
+}
+
+.home:active{
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home::after{
+  content: "";
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.home:hover::after{
+  transform: scale(1.5);
+  opacity: 0;
+}
+  
+  .th {
+    margin-bottom: 20px;
+  }
+
+  
+  
+  .game {
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  
+  .players {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .player {
+    width: 180px;
+    margin:0 10px 20px 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.425);
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .score {
+    background-color: rgba(0, 0, 0, 0.472);
+    border-radius: 4px;
+    padding: 5px;
+  
+  
+  }
+  
+  
+  
+  .square {
+    width: 120px;
+    height: 120px;
+    background-color:rgb(228, 228, 228);
+    display: inline-block;
+    border-radius: 15px;
+    
+  }
+  
+  .o {
+    position: relative;
+  }
+  
+  .o::after {
+    position: absolute;
+    content: "\O";
+    font-size: 55px;
+    line-height: 120px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: red;
+  }
+  
+  .x {
+    position: relative;
+  }
+  
+  .x::after {
+    position: absolute;
+    content: "\X";
+    font-size: 55px;
+    line-height: 120px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: sienna;
+  }
+  
+  button {
+    width: 190px;
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 15px;
+    text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+    background-color: #6e94c5;
+    border: none;
+    border-radius: 4px;
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  button:hover {
+    box-shadow: 0 10px  20px rgba(0, 0, 0, 0.4);
+    color: #333;
+    cursor: pointer;
+    background-color:  #6e94c5;
+  }
+
+  button:active{  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  
+  @media screen and (max-width: 600px){
+    .square {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .o::after {
+  
+      font-size: 35px;
+      line-height: 80px;
+  
+  
+    }
+  
+    .x::after {
+  
+      font-size: 35px;
+      line-height: 80px;
+    }
+  
+  }
+    
